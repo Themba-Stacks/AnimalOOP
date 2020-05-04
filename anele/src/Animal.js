@@ -8,7 +8,7 @@ class Animal {
     }
 
     eat(){
-        return (this.name + "eat")
+        return (this.name + " eat")
     }
 }
 class Cat extends Animal {
@@ -37,4 +37,3 @@ let dog = new Dog ();
 cat.name = "Rax";
 console.log(dog.sound())
 console.log(dog.eat());
-
