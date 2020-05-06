@@ -8,7 +8,7 @@ class Animal {
     }
 
     eat(){
-        return (this.name + "eat")
+        return (this.name + " eats")
     }
 }
 class Cat extends Animal {
@@ -16,16 +16,16 @@ class Cat extends Animal {
         super(name);
 
     }
-sound(){
+    sound(){
     return ("Cat meows")
 }
 }
 let cat = new Cat ();
 cat.name = "Stormy";
-console.log(cat.sound())
-console.log(cat.eat());
+//console.log(cat.sound())
+//console.log(cat.eat());
 
-class dog extends Animal {
+class Dog extends Animal {
     constructor(name){
         super(name);
     }
@@ -34,7 +34,46 @@ class dog extends Animal {
     }
 }
 let dog = new Dog ();
-cat.name = "Rax";
-console.log(dog.sound())
-console.log(dog.eat());
+dog.name = "Rax";
+//console.log(dog)
+//console.log(dog.eat());
 
+class Home {
+    constructor(){
+    this.adoptedpet = [];
+    this.len = 0;
+    }
+
+    adoptPet(adopt){
+        this.adoptedpet[this.len] = adopt;
+        this.len++;
+        return this.adoptedpet;
+    }
+
+    getpets(){
+        return this.adoptedpet;
+        }
+    
+    
+    makeAllSounds(){
+        for (let i = 0; i < this.adoptedpet.length; i++) {
+            if (this.adoptedpet[i] == Dog){
+                console.log('Dog barks')
+            }else if(this.adoptedpet[i] == Cat){
+                console.log('Cat meows')
+
+            }
+            
+        }
+
+    }
+}
+
+
+
+var home = new Home();
+home.adoptPet(dog)
+home.adoptPet(cat)
+
+
+console.log(home.getpets())
