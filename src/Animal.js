@@ -50,10 +50,9 @@ class Home {
         return this.adoptedpet;
     }
 
-    getpets(){
+    get pets(){
         return this.adoptedpet;
         }
-    
     
     makeAllSounds(){
         for (let i = 0; i < this.adoptedpet.length; i++) {
@@ -61,11 +60,8 @@ class Home {
                 console.log('Dog barks')
             }else if(this.adoptedpet[i] == Cat){
                 console.log('Cat meows')
-
-            }
-            
+            }   
         }
-
     }
 }
 
@@ -74,6 +70,6 @@ class Home {
 var home = new Home();
 home.adoptPet(dog)
 home.adoptPet(cat)
-
-
-console.log(home.getpets())
+home.makeAllSounds();
+console.log(typeof(home.pets))
+console.log(home.pets)
