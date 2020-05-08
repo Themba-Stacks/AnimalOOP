@@ -1,60 +1,56 @@
 class Animal {
-    constructor(name){
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    sound(){
-        return ("<<<Sound>>>")
-    }
+  sound() {
+    return "<<<Sound>>>";
+  }
 
-    eat(){
-        return (this.name + " eats")
-    }
+  eat() {
+    return this.name + " eats";
+  }
 }
 
 class Cat extends Animal {
-    constructor(name){
-        super(name);
-    }
+  constructor(name) {
+    super(name);
+  }
 
-    sound(){
-    return ("Cat meows")
-    }
+  sound() {
+    return "Cat meows";
+  }
 }
 
 class Dog extends Animal {
-    constructor(name){
-        super(name);
-    }
-    sound(){
-        return ("Dog barks")
-    }
+  constructor(name) {
+    super(name);
+  }
+  sound() {
+    return "Dog barks";
+  }
 }
 
 class Home {
-    constructor(petList = []){
+  constructor(petList = []) {
     this.petList = petList;
-    }
+  }
 
-    adoptPet(pet){
-        this.petList.push(pet);
-    }
+  adoptPet(pet) {
+    this.petList.push(pet);
+  }
 
-    get pets(){
-        return this.petList;
-        }
-    
-    makeAllSounds(){
-        for (let i = 0; i < this.petList.length; i++) {
-            console.log(this.petList[i].sound()) 
-        }
+  makeAllSounds() {
+    for (let i = 0; i < this.petList.length; i++) {
+      console.log(this.petList[i].sound());
     }
+  }
 }
 
-let cat1 = new Cat ();
+let cat1 = new Cat();
 cat1.name = "Stormy";
 
-let dog = new Dog ();
+let dog = new Dog();
 dog.name = "Rax";
 
 var home = new Home();
@@ -67,4 +63,3 @@ home.adoptPet(cat);
 home.adoptPet(dog2);
 
 home.makeAllSounds();
-//console.log(home.pets)
